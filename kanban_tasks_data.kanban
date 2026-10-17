@@ -11,21 +11,25 @@
 			"uuid": "d3335b02-31e6-4fa5-8734-a2cd56b4997e",
 			"title": "Todo",
 			"tasks": [
-				"7bb23f55-e9e0-4d03-ac9d-954e0117d7f0"
+				"d0d2ab1a-e3b8-41a5-b7e4-07c9c277637f",
+				"50a203fc-c224-4080-8aac-b9d637742d35"
 			]
 		},
 		{
 			"uuid": "c5647215-baf7-4ea1-8c8f-63ea1d600aed",
 			"title": "Doing",
 			"tasks": [
-				"df994afc-4cd4-4a83-8fc6-f7d39118064d"
+				"7bb23f55-e9e0-4d03-ac9d-954e0117d7f0",
+				"ce7fac3e-0dc0-4a23-b93d-dffa538c4c15"
 			]
 		},
 		{
 			"uuid": "a954035c-e2ca-44d5-be7f-fd24af04a87a",
 			"title": "Done",
 			"tasks": [
-				"45c5fd3f-8858-4e4b-9830-374c859b952e"
+				"45c5fd3f-8858-4e4b-9830-374c859b952e",
+				"df994afc-4cd4-4a83-8fc6-f7d39118064d",
+				"0ba3d078-f40a-4315-81b6-55b863877788"
 			]
 		}
 	],
@@ -47,6 +51,34 @@
 		{
 			"uuid": "df994afc-4cd4-4a83-8fc6-f7d39118064d",
 			"title": "Make the player can look around and jump",
+			"description": "",
+			"category": "32810b53-f1bf-4ade-88c8-3b3459daa4f1",
+			"steps": []
+		},
+		{
+			"uuid": "0ba3d078-f40a-4315-81b6-55b863877788",
+			"title": "lil tube physics!",
+			"description": "",
+			"category": "32810b53-f1bf-4ade-88c8-3b3459daa4f1",
+			"steps": []
+		},
+		{
+			"uuid": "ce7fac3e-0dc0-4a23-b93d-dffa538c4c15",
+			"title": "runnin",
+			"description": "",
+			"category": "32810b53-f1bf-4ade-88c8-3b3459daa4f1",
+			"steps": []
+		},
+		{
+			"uuid": "d0d2ab1a-e3b8-41a5-b7e4-07c9c277637f",
+			"title": "lil ship",
+			"description": "",
+			"category": "32810b53-f1bf-4ade-88c8-3b3459daa4f1",
+			"steps": []
+		},
+		{
+			"uuid": "50a203fc-c224-4080-8aac-b9d637742d35",
+			"title": "3rd person toggle",
 			"description": "",
 			"category": "32810b53-f1bf-4ade-88c8-3b3459daa4f1",
 			"steps": []

@@ -4,6 +4,9 @@ extends CharacterBody3D
 const SPEED: float = 5.0
 const JUMP_SPEED: float = 4.5
 const SENSITIVITY: float = 0.003
+const ACCELERATION: float = 12.0
+const FRICTION: float = 30.0
+const AIR_ACCELERATION: float = 2.0
 
 @onready var camera: Camera3D = $Camera3D
 
@@ -51,7 +54,32 @@ func _physics_process(delta: float) -> void:
 		Vector3(input_dir.x, 0, input_dir.y)
 	).normalized()
 
-	velocity.x = direction.x * SPEED
-	velocity.z = direction.z * SPEED
-
+	var horizontal_velocity = Vector3(
+		velocity.x,
+		0,
+		velocity.z
+	)
+	
+	var target_velocity = direction * SPEED
+	var rate: float
+	
+	if is_on_floor():
+		if direction != Vector3.ZERO:
+			rate = ACCELERATION
+		else:
+			rate = FRICTION
+	else:
+		if direction != Vector3.ZERO:
+			rate = AIR_ACCELERATION
+		else:
+			rate = 0.0
+	
+	horizontal_velocity = horizontal_velocity.move_toward(
+		target_velocity,
+		rate * delta
+	)
+	
+	velocity.x = horizontal_velocity.x
+	velocity.z = horizontal_velocity.z
+	
 	move_and_slide()
