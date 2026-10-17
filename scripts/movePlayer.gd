@@ -2,6 +2,7 @@
 extends CharacterBody3D
 
 const SPEED: float = 5.0
+const JUMP_SPEED: float = 4.5
 const SENSITIVITY: float = 0.003
 
 @onready var camera: Camera3D = $Camera3D
@@ -34,12 +35,15 @@ func _unhandled_input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+	
+	if Input.is_action_just_pressed("player_jump") and is_on_floor():
+		velocity.y = JUMP_SPEED
+	
 	var input_dir = Input.get_vector(
-		"ui_left",
-		"ui_right",
-		"ui_up",
-        "ui_down"
+		"player_moveLeft",
+		"player_moveRight",
+		"player_moveUp",
+        "player_moveDown"
 	)
 
 	var direction = (
