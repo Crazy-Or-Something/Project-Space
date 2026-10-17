@@ -11,8 +11,7 @@
 			"uuid": "d3335b02-31e6-4fa5-8734-a2cd56b4997e",
 			"title": "Todo",
 			"tasks": [
-				"d0d2ab1a-e3b8-41a5-b7e4-07c9c277637f",
-				"50a203fc-c224-4080-8aac-b9d637742d35"
+				"d0d2ab1a-e3b8-41a5-b7e4-07c9c277637f"
 			]
 		},
 		{
@@ -20,7 +19,8 @@
 			"title": "Doing",
 			"tasks": [
 				"7bb23f55-e9e0-4d03-ac9d-954e0117d7f0",
-				"ce7fac3e-0dc0-4a23-b93d-dffa538c4c15"
+				"4c44e02e-4e3b-46ae-b07b-c5a11d7f8650",
+				"50a203fc-c224-4080-8aac-b9d637742d35"
 			]
 		},
 		{
@@ -29,7 +29,8 @@
 			"tasks": [
 				"45c5fd3f-8858-4e4b-9830-374c859b952e",
 				"df994afc-4cd4-4a83-8fc6-f7d39118064d",
-				"0ba3d078-f40a-4315-81b6-55b863877788"
+				"0ba3d078-f40a-4315-81b6-55b863877788",
+				"ce7fac3e-0dc0-4a23-b93d-dffa538c4c15"
 			]
 		}
 	],
@@ -79,6 +80,13 @@
 		{
 			"uuid": "50a203fc-c224-4080-8aac-b9d637742d35",
 			"title": "3rd person toggle",
+			"description": "",
+			"category": "32810b53-f1bf-4ade-88c8-3b3459daa4f1",
+			"steps": []
+		},
+		{
+			"uuid": "4c44e02e-4e3b-46ae-b07b-c5a11d7f8650",
+			"title": "cam bob",
 			"description": "",
 			"category": "32810b53-f1bf-4ade-88c8-3b3459daa4f1",
 			"steps": []

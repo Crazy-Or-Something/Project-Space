@@ -1,10 +1,16 @@
 [gd_scene format=3 uid="uid://c4q0vlmxs21hq"]
 
 [ext_resource type="Script" uid="uid://cep3rawrwqpmg" path="res://scripts/movePlayer.gd" id="1_7f0ey"]
+[ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="2_2ed71"]
+[ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="3_wsrlb"]
+[ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_gyq1a"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_177yl"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m26dn"]
+
+[sub_resource type="Resource" id="Resource_2kmpy"]
+script = ExtResource("3_wsrlb")
 
 [sub_resource type="BoxMesh" id="BoxMesh_m26dn"]
 
@@ -22,8 +28,25 @@ mesh = SubResource("CapsuleMesh_177yl")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=479849785]
 shape = SubResource("CapsuleShape3D_m26dn")
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=667324917]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53532284, -0.37177408)
+[node name="HeadPivot" type="Node3D" parent="CharacterBody3D" unique_id=843291184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49312925, -0.39905405)
+
+[node name="TiltPivot" type="Node3D" parent="CharacterBody3D/HeadPivot" unique_id=1194793611]
+
+[node name="PCamPlr" type="Node3D" parent="CharacterBody3D/HeadPivot/TiltPivot" unique_id=1155842536 node_paths=PackedStringArray("follow_target", "look_at_target")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8087642, -0.39905405)
+top_level = true
+script = ExtResource("2_2ed71")
+priority = 10
+follow_mode = 1
+follow_target = NodePath("../..")
+look_at_mode = 1
+look_at_target = NodePath("../..")
+tween_resource = SubResource("Resource_2kmpy")
+align_transform_with_view = Callable()
+align_position_with_view = Callable()
+align_rotation_with_view = Callable()
+metadata/_custom_type_script = "uid://csjccrhj5wnx7"
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1665806241]
 transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1.8210776, 0)
@@ -34,3 +57,13 @@ mesh = SubResource("BoxMesh_m26dn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2108867346]
 shape = SubResource("BoxShape3D_177yl")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1443980024]
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.8087642, -0.39905405)
+top_level = true
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D" unique_id=148068199]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("4_gyq1a")
