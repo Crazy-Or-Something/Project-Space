@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c4q0vlmxs21hq"]
+
+[ext_resource type="Script" uid="uid://cep3rawrwqpmg" path="res://scripts/movePlayer.gd" id="1_7f0ey"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_177yl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m26dn"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_m26dn"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_177yl"]
+
+[node name="World" type="Node3D" unique_id=1082810940]
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=843962597]
+script = ExtResource("1_7f0ey")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1712650585]
+mesh = SubResource("CapsuleMesh_177yl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=479849785]
+shape = SubResource("CapsuleShape3D_m26dn")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=667324917]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53532284, -0.37177408)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1665806241]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1.8210776, 0)
+rotation_order = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1159945384]
+mesh = SubResource("BoxMesh_m26dn")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=2108867346]
+shape = SubResource("BoxShape3D_177yl")

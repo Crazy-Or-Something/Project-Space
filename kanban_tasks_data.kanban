@@ -1,0 +1,68 @@
+{
+	"categories": [
+		{
+			"uuid": "32810b53-f1bf-4ade-88c8-3b3459daa4f1",
+			"title": "Task",
+			"color": "569eff"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "d3335b02-31e6-4fa5-8734-a2cd56b4997e",
+			"title": "Todo",
+			"tasks": [
+				"7bb23f55-e9e0-4d03-ac9d-954e0117d7f0"
+			]
+		},
+		{
+			"uuid": "c5647215-baf7-4ea1-8c8f-63ea1d600aed",
+			"title": "Doing",
+			"tasks": [
+				"df994afc-4cd4-4a83-8fc6-f7d39118064d"
+			]
+		},
+		{
+			"uuid": "a954035c-e2ca-44d5-be7f-fd24af04a87a",
+			"title": "Done",
+			"tasks": [
+				"45c5fd3f-8858-4e4b-9830-374c859b952e"
+			]
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "7bb23f55-e9e0-4d03-ac9d-954e0117d7f0",
+			"title": "Make the game itself",
+			"description": "",
+			"category": "32810b53-f1bf-4ade-88c8-3b3459daa4f1",
+			"steps": []
+		},
+		{
+			"uuid": "45c5fd3f-8858-4e4b-9830-374c859b952e",
+			"title": "Make a lil player that can move",
+			"description": "\n",
+			"category": "32810b53-f1bf-4ade-88c8-3b3459daa4f1",
+			"steps": []
+		},
+		{
+			"uuid": "df994afc-4cd4-4a83-8fc6-f7d39118064d",
+			"title": "Make the player can look around and jump",
+			"description": "",
+			"category": "32810b53-f1bf-4ade-88c8-3b3459daa4f1",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"d3335b02-31e6-4fa5-8734-a2cd56b4997e"
+			],
+			[
+				"c5647215-baf7-4ea1-8c8f-63ea1d600aed"
+			],
+			[
+				"a954035c-e2ca-44d5-be7f-fd24af04a87a"
+			]
+		]
+	}
+}
