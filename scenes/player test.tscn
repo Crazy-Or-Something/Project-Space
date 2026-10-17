@@ -11,6 +11,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_177yl"]
 
 [node name="World" type="Node3D" unique_id=1082810940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.315635, 0)
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=843962597]
 script = ExtResource("1_7f0ey")
