@@ -23,7 +23,7 @@ PhantomCameraManager="*uid://duq6jhf6unyis"
 
 [display]
 
-window/size/mode=2
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -38,6 +38,7 @@ enabled=PackedStringArray("res://addons/fancy_folder_colors/plugin.cfg", "res://
 [file_customization]
 
 folder_colors={
+"res://addons/": "blue",
 "res://anims/": "green",
 "res://assets/": "yellow",
 "res://assets/core/": "red",

@@ -8,6 +8,10 @@ as 17/10/2026, lil tub (placeholder player) can move, look around, jump and run,
 
 ![img](assets/README/status_image_17_10.png)
 
+## Itch.io page
+
+soon
+
 ## Controls
 
 ### Movement

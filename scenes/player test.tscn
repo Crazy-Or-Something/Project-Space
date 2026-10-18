@@ -16,6 +16,22 @@ script = ExtResource("3_wsrlb")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_177yl"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cs186"]
+
+[sub_resource type="Sky" id="Sky_2ed71"]
+sky_material = SubResource("ProceduralSkyMaterial_cs186")
+process_mode = 1
+
+[sub_resource type="Environment" id="Environment_177yl"]
+background_mode = 2
+sky = SubResource("Sky_2ed71")
+ambient_light_source = 3
+reflected_light_source = 2
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_m26dn"]
+
+[sub_resource type="Compositor" id="Compositor_ynmf2"]
+
 [node name="World" type="Node3D" unique_id=1082810940]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.315635, 0)
 
@@ -67,3 +83,11 @@ top_level = true
 process_priority = 300
 process_physics_priority = 300
 script = ExtResource("4_gyq1a")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1819018278]
+transform = Transform3D(1, 0, 0, 0, 0.860925, 0.50873184, 0, -0.50873184, 0.860925, 0, 3.475084, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1702371247]
+environment = SubResource("Environment_177yl")
+camera_attributes = SubResource("CameraAttributesPractical_m26dn")
+compositor = SubResource("Compositor_ynmf2")
